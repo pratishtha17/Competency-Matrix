@@ -1,0 +1,354 @@
+@font-face {
+    font-family: 'Sapient Centro Slab';
+    src: url(./fonts/SapientCentroSlab-Reg.otf);
+    src: url(./fonts/SapientCentroSlab-Reg.woff);
+}
+@font-face {
+    font-family: 'Sapient Centro Slab Thin';
+    src: url(./fonts/SapientCentroSlab-Thin.otf);
+    src: url(./fonts/SapientCentroSlab-Thin.woff);
+}
+@font-face {
+    font-family: 'Sapient Centro Slab Medium';
+    src: url(./fonts/SapientCentroSlab-Medium.otf);
+    src: url(./fonts/SapientCentroSlab-Medium.woff);
+}
+@font-face {
+    font-family: 'Sapient Centro Slab Light';
+    src: url(./fonts/SapientCentroSlab-Light.otf);
+    src: url(./fonts/SapientCentroSlab-Light.woff);
+}
+@font-face {
+    font-family: 'Sapient Centro Slab XThin';
+    src: url('./fonts/SapientCentroSlab-XThin.otf');
+    src: url('./fonts/SapientCentroSlab-XThin.woff');
+}
+html 
+{
+    height: 100%;
+    max-height: 100vh;
+}
+/* styles for body */
+body 
+{
+    -webkit-background-size: cover;
+    background: url("../img/background.jpg") no-repeat center center fixed;
+    font-family: 'Sapient Centro Slab';
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* styles for header */
+header 
+{
+    background-image: -moz-linear-gradient( 90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(238, 238, 238) 0%, rgb(255, 255, 255) 100%);
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    top: 0;
+    width: 100%;
+}
+header .header_container
+{
+    background: url('../img/header_background.png') top center/ auto 100% no-repeat;
+    margin: auto;
+    width: 100%;
+}
+.logo     
+{
+    float: left;
+    height: 60px;
+    margin-left: 23px;
+    text-align: left;
+    width: 45%;
+}
+.sn_logo 
+{
+    margin-top: 15px;
+    width: 15px;
+    z-index: 4;
+}
+.name_pic 
+{
+    color: #333333;
+    float: right;
+    font-size: 12px;
+    height: 60px;
+    padding-left: 0.5%;
+    text-align: right;
+    width: 45%;
+}
+
+.header_dropdown 
+{
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    position: relative;
+}
+.profile_pic 
+{
+    height: 35px;
+    margin: 12px;
+    width: 35px;
+}
+.round_corner 
+{
+    border-radius: 5px;
+    border: 1px solid #5f5f5f;
+    opacity: 0.9;
+}
+.header_dropdown_content 
+{
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: none;
+    height: 110px;
+    position: absolute;
+    right: 15px;
+    text-align: center;
+    top: 57px;
+    width: 150px;
+    z-index: 1;
+}
+.show 
+{
+    display: block;
+}
+.header_dropdown_content a 
+{
+    align-items: center;
+    border-radius: 5px;
+    color: #000000;
+    display: flex;
+    font-family: "Sapient Centro Slab";
+    padding: 5% 0 5% 10%;
+    text-align: left;
+    text-decoration: none;
+}
+.header_dropdown_content a img 
+{
+    height: 8%;
+    width: 15%;
+}
+.header_dropdown_content a:hover 
+{
+    background-color: transparent;
+    box-shadow: 0 0 5px #888888;
+}
+.header_dropdown_content span 
+{
+    margin-left: 10px;
+}
+#header_profile_pic 
+{
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
+}
+#logout_image 
+{
+    width: 14%;
+}
+.header_profile_name
+{
+    float: right;
+    font-family: "Sapient Centro Slab";
+    margin-top: 21px;
+    text-align: right;
+    width: 70%;
+}
+.scroll 
+{
+    overflow-y: auto;
+}
+.scroll::-webkit-scrollbar 
+{
+    width: 10px;
+}
+.scroll::-webkit-scrollbar-thumb 
+{
+    background-color: #555;
+    border-radius: 10px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    visibility: hidden;
+}
+.scroll:hover::-webkit-scrollbar-thumb
+{
+    visibility: visible;
+}
+footer 
+{
+    background-image: url("../img/footer_pattern.png");
+    background-repeat: repeat-x;
+    background-size: contain;
+    bottom: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    z-index: 153;
+}
+footer .copyright p 
+{
+    color: #8c8c8c;
+    font:8px "Sapient Centro Slab-Light";
+    margin: 0px;
+    padding: 0 0.8% 0 12% ;
+    text-align: left;
+    text-transform: uppercase;
+    width: 85%;
+    z-index: 153;
+}
+footer .copyright p span 
+{
+    color: #ffffff;
+    font-weight: bold;
+}
+/*STYLES FOR ALL MODALS*/
+.modal {
+    align-items: center;
+    background-image: url("../img/layer.png");
+    display: none;
+    flex-direction: column;
+    height: 100%;
+    justify-content:space-between;
+    left: 0px;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 119;
+}
+.inside_modal {
+    box-sizing: border-box;
+    background-color: #424242;
+    border-radius: 3%;
+    margin: auto;
+    padding: 17px;
+    width: 300px;
+    z-index: 131;
+}
+.modal_text {
+    color: #fff;
+    font:bold 15px;
+}
+.modal_p {
+    color: #fff;
+    font: bold 20px;
+    text-align: left;
+}
+.red_button {
+    background-image: -moz-linear-gradient( -90deg, #de2728 0%, #d02223 100%);
+    background-image: -ms-linear-gradient( -90deg, #de2728 0%, #d02223 100%);
+    background-image: -webkit-linear-gradient( -90deg, #de2728 0%, #d02223 100%);
+    border-radius: 3px;
+    border: 2px solid #e53839;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    height: 30px;
+    justify-content: center;
+    margin-left: 0;
+    width: 85px;
+}
+.input_text_modal {
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px #a1a1a1;
+    color: #fff;
+    font:14px 'Sapient Centro Slab Thin';
+    width: 100%;
+}
+.email_error{
+    display: none;
+}
+.display_flex {
+    display: flex;
+}
+.mobile_view, .display_none, .for_mobile {
+    display: none;
+}
+
+
+.visibility{
+    visibility: visible !important;
+}
+.visibility_hidden{
+    visibility: hidden !important;
+}
+.error_message {
+    color: rgb(229, 56, 57);
+    font:bold 'Sapient Centro Slab Thin';
+    padding-top: 5px;
+    visibility: hidden;
+}
+
+/*For session error and internal server error*/
+.server_error,.invalid_session_error{
+    text-align: center;
+    color: white;
+}
+
+.invalid_session_error a{
+    color: red;
+} 
+
+/*---Modal ends---*/
+/*---view ports---*/
+@media screen and (min-width:1148px) {
+    section {
+        width: 80%;
+    }
+    header .header_container {
+        width: 80%;
+    }
+}
+@media screen and (min-width:1044px) and (max-width:1147px) {
+    section {
+        width: 90%;
+    }
+    header .header_container {
+        width: 90%;
+    }
+}
+@media screen and (min-width:767px) and (max-width:1043px) {
+    section {
+        width: 98%;
+    }
+    header .header_container {
+        width: 98%;
+    }
+}
+@media screen and (max-width:441px) {
+    body {
+        -webkit-background-size: cover;
+    }
+    div .copyright {
+        padding-left: 0;
+        text-align: center;
+    }
+    header .header_container {
+        width: 100%;
+    }
+    .name_pic {
+        width: 80%;
+    }
+    .logo {
+        width: 10%;
+    }
+    footer{
+       width:100%;
+        overflow-x: hidden;
+        height: 33px;
+    }
+
+     footer .copyright p
+    {
+        padding-left: 0;
+        text-align: center;
+        width:100%;
+    } 
+}

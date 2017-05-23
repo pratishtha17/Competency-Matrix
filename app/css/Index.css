@@ -1,0 +1,252 @@
+/*removing the header*/
+header {
+    height: 0 !important;
+}
+/* custom checkbox */
+input[type=checkbox] {
+    visibility: hidden;
+}
+input:-webkit-autofill {
+    font:16px 'Sapient Centro Slab Thin';
+    -webkit-box-shadow: 0 0 0 1000px #191919 inset;
+    -webkit-text-fill-color: #fff !important;
+}
+/* styling for the 'COMPETENCY MATRIX' */
+h1 {
+    font:normal 75px/68px 'Sapient Centro Slab XThin';
+    margin-top: 30px;
+   }
+div a {
+    color: #FFF;
+    font:16px 'Sapient Centro Slab Thin';
+    text-decoration: none;
+}
+/* custom checkbox */
+div label {
+    cursor: pointer;
+    height: 8px;
+    left: 24.5%;
+    position: absolute;
+    top: 25%;
+    width: 50%;
+}
+.section {
+    height: 94%;
+    margin: auto;
+    max-width: 70%;
+}
+/* the complete division containing two subdivisions 'topic' and 'login' */
+.container {
+    display: flex;
+    margin-top: 24%;
+}
+/* alignment : complete division for title and logo */
+.topic {
+    color: rgba(255, 255, 255, 1);
+    margin: 0 10% 0 0;
+    padding-top: 0;
+    width: 49%;
+}
+/* alignment : complete division for login form */
+.login {
+    height: 80%;
+    margin: 0 0 0 10%;
+    width: 40%;
+}
+/* 'SAPIENT NITRO'  above 'COMPETENCY MATRIX'*/
+.sn_logo {
+    width: 125px;
+}
+/* alignment : login form fields */
+.login_fields {
+    margin: 10% 0 12% 0;
+}
+/* styling for username field */
+.login_form input{
+    border: none;
+    border-bottom: solid 1px #696969;
+    color: #FFF;
+    font:16px/25px 'Sapient Centro Slab Thin';
+    padding: 0 0 3px 25px;
+    width: 275px;
+}
+.login_form input:focus {
+    outline: none;
+}
+.uname {
+    background: transparent url(../img/username.png) no-repeat 2px 2px/ 16px 16px;
+}
+/* styling for password field */
+.psw {
+    background: transparent url(../img/password.png) no-repeat 2px 2px/ 14px 16px;
+}
+.display_border_highlight{
+    border-bottom: solid 2px #FFF !important;
+}
+.display_border_no_highlight{
+    border-bottom: solid 1px #696969 !important;
+}
+
+/* custom checkbox */
+.checkbox {
+    border: solid 1px #FFF;
+    height: 15px;
+    position: relative;
+    width: 15px;
+}
+/*error message styling*/
+
+.remember_me {
+    display: flex;
+    font:16px 'Sapient Centro Slab Thin';
+    height: 30px;
+    width: 50%;
+}
+.remember_text {
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    height: 20px;
+    margin-top: 0;
+    padding:0 0 2px 12px; 
+    width: 75%;
+}
+/* custom checkbox */
+.checkbox input[type=checkbox]:checked+ label {
+    background-color: #FFF;
+}
+/* login button*/
+.login_button {
+    background-color: #d62425;
+    border: 2px solid rgb(229, 56, 57);
+    border-radius: 10px;
+    color: #FFF;
+    cursor: pointer;
+    font:1em "Sapient Centro Slab Medium";
+    height: 50px;
+    vertical-align: center;
+    width: 300px;
+}
+
+.forgot_password {
+    font: 16px 'Sapient Centro Slab Thin';
+    margin-left: 0;
+    text-align: left;
+}
+/* styling for Remember Me and Forgot Password */
+
+/* For tablets portrait and mobile phones landscape: */
+@media only screen and (max-width: 900px) and (min-width:440px) {
+    section div {
+        display: block;
+        width: 100% !important;
+        /*Overriding the parent width*/
+    }
+    h1 {
+        font-size: 62px;
+    }
+    form {
+        margin: auto;
+        width: 90%;
+    }
+    .section {
+        max-width: 70%;
+        min-height: 92.5vh;
+    }
+    .container {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .topic {
+        margin: 4% 1% 4% 1%;
+    }
+    .login {
+        margin: 4% 1% 10% 1%;
+        text-align: center;
+    }
+    .login_form input {
+        background-size: 13px 14px;
+        float: none;
+        font-size: 1.2em;
+        height: 20px;
+        margin: 1% 0 1% 0;
+        width: 80%;
+    }
+    .login_button {
+        height: 50px;
+        width: 87%;
+    }
+    .checkbox {
+        margin-left: 6%;
+        max-width: 15px;
+    }
+    .remember_text {
+        
+        width: 100px;
+    }
+    .forgot_password {
+        padding-left: 6%;
+        text-align: left;
+        width: 80%;
+    }
+}
+/* For mobile phones portrait: */
+@media only screen and (max-width: 441px) {
+    /*Overriding the parent width*/
+    section div {
+        display: block;
+        width: 100% !important;
+    }
+    h1 {
+        font-size: 39px;
+    }
+    div label {
+        cursor: pointer;
+        height: 8px;
+        left: 24.5%;
+        position: absolute;
+        top: 25%;
+        width: 50%;
+    }
+    .section {
+        max-width: 80%;
+    }
+    .container {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .topic {
+        font-size: 14px;
+        margin: 4% 1% 4% 1%;
+    }
+    .sn_logo {
+        width: 86px;
+    }
+    .login {
+        margin: 4% 1% 0 1%;
+        text-align: center;
+    }
+    .login_form input {
+        background-size: 13px 14px;
+        padding-left: 25px;
+        width: 78%;
+    }
+    .login_button {
+        font-size: 16px;
+        height: 50px;
+        width: 92%;
+    }
+    .checkbox/*  custom checkbox */
+    {
+        max-width: 5%;
+        margin-left: 6%;
+    }
+    .remember_text {
+        padding:0 10px 0 10px;
+        text-align: left;
+    }
+    .forgot_password {
+        margin-left: 20px;
+        text-align: left;
+    }
+}

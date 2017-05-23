@@ -1,0 +1,32 @@
+.profile {
+    background-color: #d52425;
+    border-radius: 8px;
+    width: 100%;
+}
+.profile_img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+}
+.profile_details {
+    color: white;
+    text-align: left;
+    width: 100%;
+    max-height: 200px;
+    padding-bottom: 1%;
+}
+
+.profile_name, .profile_detail{
+    padding: 0px 8% 0px 8%;
+    word-wrap: break-word;
+}
+.profile_name {
+    font-size: 1.1em;
+}
+.profile_detail {
+    font-size: 0.8em;
+}
+.profile_detail:last-of-type{
+    line-height: 1.2;
+    padding-bottom: 5%;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Specifying language of the page -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot/Reset Password</title>
+    <link rel="icon" href="img/fav-icon.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/forgot.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    <!-- Header is left empty as it is not required in this page -->
+    <section class="section">
+        <div class="container">
+            <!-- Contains all the content of the page -->
+            <div class="topic">
+                <!-- Contains the heading of the page -->
+                <img src="img/sapient-nitro.png" alt="SapientNitro logo" id ="logo" class="sn_logo">
+                <h1 class="heading">COMPETENCY<br/>
+                    MATRIX</h1>
+            </div>
+            <div id="recovery" class="recovery">
+                <!-- Contains the input and button for password recovery -->
+                <input type="text" name="username" class="username" value="" placeholder="Username" id="username" aria-label="enter the username" autofocus="autofocus">
+                <div id="error_message" class="error_message">Warning message here</div>
+                <input type="button" name="send-password" value="Send Password" id="send_password" aria-label="send password" class="send_password">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <!-- Footer is attached and styled from the global css file -->
+        <div class="copyright">
+            <p>COPYRIGHT &copy; 2006-2017 <span>SAPIENT</span></p>
+        </div>
+        <div class="pattern"></div>
+    </footer>
+    <script src="js/global.js"></script>
+    <script src="js/forgot.js" type="text/javascript" charset="utf-8" async></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <!-- Connecting to emailJS for the email service -->
+    <script type="text/javascript">
+    (function() {
+        emailjs.init("user_SQrafWLYw4R7sUlBublde");
+    })();
+    </script>
+    <!-- Specifying the userID for emailJS -->
+</body>
+
+</html>

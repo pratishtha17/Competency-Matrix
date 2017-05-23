@@ -1,0 +1,519 @@
+section,.for_largescreen {
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+/*custom radiobutton*/
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+/*custom radiobutton*/
+div label {
+    cursor: pointer;
+    height: 50%;
+    left: 25%;
+    position: absolute;
+    right: 25%;
+    top: 25%;
+    width: 50%;
+}
+
+datalist {
+    display: block;
+}
+
+/*custom checkbox*/
+.checkbox_primary input[type=checkbox]:checked+ label,
+.checkbox_secondary input[type=checkbox]:checked+ label {
+    background-color: #FFF;
+}
+
+.for_largescreen{
+    width: 100%;
+}
+
+/*skills section*/
+.skills,.for_largescreen {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container,
+.skills_sec {
+    text-align: center;
+}
+
+/*one row and sub rows in the skills*/
+.list_element,
+.sub_list_element {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
+    padding: 10px;
+}
+
+/*custom checkbox*/
+.checkbox_primary,
+.checkbox_secondary {
+    border: solid 0.8px #585757;
+    height: 10px;
+    padding-top: 1%;
+    position: relative;
+    visibility: hidden;
+    width: 12px;
+}
+
+.container {
+    flex-grow: 1;
+    margin-top: 2%;
+}
+
+.skills_sec {
+    width: 49.5%;
+}
+
+/*profile box*/
+.container:first-of-type {
+    height: 500px;
+    margin-left: 2%;
+    padding-right: 2%;
+    width: 15%;
+}
+
+/*Skills box*/
+.container:last-of-type {
+    width: 70%;
+}
+
+/*star image*/
+.rating_star {
+    height: 18px;
+    width: 18px;
+}
+
+/*primary and secondary lists*/
+.skills_sec_content {
+    background-color: #424242;
+    border-radius: 5px 5px 0 0;
+}
+
+.skills_sec_content ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*headings for 2 lists*/
+.skills_sec_heading {
+    color: #fff;
+    font-size: 1.3em;
+    margin-left: 2%;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+/* back button to supervisor home page*/
+.back_button {
+    color: #aaaaaa;
+    font-size: 1.2em;
+    height: 50px;
+    margin-right: 100%;
+    text-align: left;
+    text-decoration: none;
+}
+
+.back_icon {
+    font-size: 1.2em;
+    padding-right: 10px;
+}
+
+.down_arrow {
+    color: #fff;
+    font-size: 1.5ex;
+}
+
+/*main skill eg: html*/
+.skill_item {
+    color: #fff;
+    flex-grow: 5;
+    height: 50px;
+    margin: 30px 0 0 10px;
+    text-align: left;
+}
+
+/*subskill item eg: local storage*/
+.sub_skill_item {
+    color: white;
+    flex-grow: 5;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.skill_level
+/*.sub_skill_star*/
+{
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 5px 10px;
+}
+
+/*one row in the skills*/
+.list_element {
+    border-bottom: 1px solid #515151;
+}
+
+.sub_list_element {
+    background-color: #3d3d3d;
+    border-bottom: 1px solid #515151;
+    display: flex;
+    opacity: 0.5;
+    padding-left: 30px;
+}
+
+.edit {
+    color: white;
+}
+
+.button_list_div {
+    align-items: center;
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    margin-right: 21px;
+}
+
+.buttonlist {
+    background-color: #424242;
+    border-radius: 0 0 5px 5px;
+    margin-top: 0px;
+}
+
+.add_skills,
+.edit_primary,
+.edit_secondary {
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.1em;
+    height: 40px;
+    margin-right: 3px;
+    outline: none;
+    padding-left: 40px;
+    text-align: center;
+}
+
+.add_skills {
+    background: #dd2728 url("../img/add_symbol.png") 5% 50%/30px 30px no-repeat;
+    margin-right: 9px;
+    width: auto;
+}
+
+.edit_primary,
+.edit_secondary {
+    background: #fdfdfd url("../img/edit_symbol.png") 8% 50%/30px 30px no-repeat;
+    color: black;
+    width: 90px;
+}
+
+/*hide secondary skills*/
+.sub_list_group {
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+}
+
+/*Scroll bar*/
+.scroll {
+    max-height: 360px;
+}
+
+/*.for_mobile {
+    display: none;
+}*/
+
+.cancel_add_skills {
+    background-color: #999999;
+    border-radius: 50%;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    text-align: center;
+    transform: translate(274px, -22px);
+    width: 16px;
+    z-index: 131;
+}
+
+.cancel:hover {
+    color: #00f;
+}
+
+.subskillholder {
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.new_skills {
+    color: white;
+    font-weight: bold;
+    margin: 2px 0 15px 0;
+}
+
+.skill_modal {
+    background-color: #424242;
+    border: none;
+    border-bottom: solid 2px #515151;
+    color: #FFF;
+    font-size: 12px;
+    margin-top: 10px;
+    padding: 0 0 3% 1%;
+    width: 95%;
+}
+
+.skill_modal:focus {
+    outline: none;
+}
+
+.sub_skill_modal_input {
+    margin-top: 10px;
+}
+
+.margin_top_class {
+    margin-top: 5px;
+}
+
+.sub_skill_modal_input:focus {
+    outline: none;
+}
+
+.sub_skill_modal_item {
+    padding-left: 20px;
+}
+
+.button_modal_save {
+    background: #dd2728 url('../img/save.png') 7% 50%/20px 20px no-repeat;
+    border: none;
+    font-size: 1.1em;
+    padding-left: 25px;
+}
+
+.newsubskill {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+    transform: translate(205px, -26px);
+}
+
+/*class add and remove for js*/
+.newsubskill {
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+.display_block {
+    display: block;
+}
+
+.display_inline {
+    display: inline;
+}
+
+
+.primary-focus-addition {
+    border-bottom: 4px solid #de2728;
+}
+
+.input_border {
+    border-bottom-color: #a1a1a1;
+}
+
+.error_border {
+    border-bottom-color: #f00;
+}
+
+.bottom-none {
+    border-bottom: none;
+}
+
+.opacity_one {
+    opacity: 1;
+}
+
+.opacity_half {
+    opacity: .5;
+}
+
+.checkbox_edit {
+    border: solid 0.8px #858484;
+}
+
+.visibility_visible {
+    visibility: visible;
+}
+
+.visibility_hidden {
+    visibility: : hidden;
+}
+
+.save_button_image {
+    background-image: url("../img/save_button.png")
+}
+
+.edit_button_image {
+    background-image: url("../img/edit_symbol.png")
+}
+
+.checkbox-border {
+    border: solid 0.8px #585757;
+}
+
+.error_text {
+    color: red;
+    margin-top: 5px;
+}
+
+.red_button {
+    float: none;
+}
+
+/*For session error and internal server error*/
+.server_error,.invalid_session_error{
+    text-align: center;
+    margin-top: 30%;
+}
+
+/*Media query for making responsive */
+@media screen and (min-width: 767px) and (max-width: 1210px) {
+    .container:first-of-type {
+        width: 30%;
+    }
+    .container:last-of-type {
+        width: 90%;
+    }
+    .button_list_div {
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 5px;
+    }
+    /*For tooltip*/
+    .tooltiptext {
+        width: 120px;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+    }
+}
+
+/*Media query for mobile device*/
+@media screen and (max-width:766px) {
+    h1 {
+        color: #c9c9c9;
+        margin: 0 auto auto 3%;
+
+    }
+    h4 {
+        color: white;
+        padding-bottom: 5px;
+    }
+    h4:first-of-type {
+        margin-left: 50px;
+    }
+    .menu div {
+        justify-content: center;
+        text-align: center;
+    }
+    footer {
+        position: static;
+    }
+    footer .copyright p {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .for_largescreen {
+        display: none;
+    }
+    .for_mobile {
+        display: block;
+        width: 100%;
+        margin-top:20px;
+        min-height: calc(100vh - 129px);
+    }
+    .primary_focus,
+    .secondary_focus {
+        cursor: pointer;
+    }
+    .menu {
+        align-items: center;
+        background-color: #262626;
+        display: flex;
+        height: 50px;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    .primary_focus {
+        border-bottom: 4px solid #de2728;
+    }
+    .mob_back_button {
+        border-radius: 20px;
+        border: 1.5px solid #666666;
+        color: #c9c9c9;
+        flex-grow: 8;
+        font-size: 1.2em;
+        padding: 5px 15px 5px 15px;
+        text-align: center;
+        text-decoration: none;
+        width: 50%;
+    }
+    .skills_sec_content {
+        border-radius: 0;
+        width: 100%;
+    }
+    .scroll {
+        max-height: 100%;
+        overflow-y: visible;
+    }
+    .sub_list_element {
+        padding-left: 15%;
+    }
+    .list_element {
+        padding-left: 8%;
+    }
+    .sub_list_element,
+    .list_element {
+        border: none;
+        height: 30px;
+        padding-top: 10px;
+    }
+    .profile_name {
+        color: white;
+        margin-left: 10%;
+    }
+    .profile_mob {
+        display: flex;
+        margin: 20px auto auto 5%;
+    }
+    .profile_img_mob {
+        height: 100px;
+    }
+    .details {
+        color: #c9c9c9;
+    }
+    .edit,
+    .addskills {
+        margin-left: 7%;
+    }
+}

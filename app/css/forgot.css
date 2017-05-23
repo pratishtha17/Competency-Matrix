@@ -1,0 +1,173 @@
+header {
+    height: 0 !important;
+    /*removing the header*/
+}
+.heading {
+    font: normal 75px/68px 'Sapient Centro Slab XThin';
+    margin: 30px 0 0 0;
+}
+
+.section {
+    height: 94%;
+    margin: auto;
+    max-width: 70%;
+}
+
+.container {
+    display: flex;
+    margin-top: 24%;
+}
+.topic {
+    color: #fff;
+    width: 49%;
+}
+
+.recovery{
+    width: 49%;
+    margin:0 0 0 10%;
+
+}
+.redirect {
+    color: #fff;
+    font-family: 'Sapient Centro Slab';
+    margin: auto;
+    padding-left: 100px;
+}
+.error_message {
+    color: #f00;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sapient Centro Slab XThin';
+    padding: 0 0 10px 20%;
+    visibility: hidden;
+}
+
+
+.sn_logo {
+    width: 125px;
+}
+
+.username {
+    background: rgba(0,0,0,0) url("../img/username.png") no-repeat 10px 10px;
+    background-size: 16px;
+    border: none;
+    box-shadow: 0 0.5px 0 0 #fff;
+    color: #fff;
+    font: 16px/19px 'Sapient Centro Slab';
+    margin: 20% 0 5% 20%;
+    padding: 10px 12% 10px 11%;
+    width: 57%;
+}
+
+.send_password {
+    background-image: -moz-linear-gradient( -90deg,  #de2728 0%, #d02223 100%);
+    background-image: -webkit-linear-gradient( -90deg,  #de2728 0%, #d02223 100%);
+    background-image: -ms-linear-gradient( -90deg,  #de2728 0%, #d02223 100%);
+    border: 2px solid #e53839;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font: 16px 'Sapient Centro Slab Medium';
+    height: 45px;
+    padding: auto;
+    text-align: center;
+    text-transform: uppercase;
+    width: 200px;
+}
+/*Removing the default blue outline of the fields*/
+.username:focus,
+.send_password:focus {
+    outline: none;
+}
+
+@media only screen and (max-width: 900px) and (min-width:440px) {
+    /* For tablets portrait and mobile phones landscape: */
+    .container {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .error_message {
+        padding-left: 0;
+    }
+    .heading {
+        font-size: 62px;
+    }
+     .recovery{
+        margin: 4% 1% 20% 1%;
+        text-align: center;
+        padding-left: 0 !important;
+    }
+    .section {
+        max-width: 70%;
+    }
+    section div {
+        display: block;
+        width: 100% !important;
+        /*Overriding the parent width*/
+    }
+    .send_password,.username {
+        float: none;
+        font-size: 16px;
+        margin: 5% 0 5% 0;
+        width: 60%;
+    }
+    .send_password {
+        height: 45px;
+        width: 200px
+    }
+    .topic {
+        margin: 4% 1% 4% 1%;
+    }
+    .username {
+        background-size: 13px 14px;
+        height: 15px;
+        padding-left: 35px;
+    }
+}
+
+@media only screen and (max-width: 441px) {
+    .heading {
+        font-size: 39px;
+    }
+    .section {
+        max-width: 80%;
+    }
+    .container {
+        flex-direction: column;
+        margin: 40px 0 0 0;
+    }
+    .topic {
+        font-size: 14px;
+        margin: 4% 1% 4% 1%;
+    }
+    .sn_logo {
+        width: 86px;
+    }
+    .recovery {
+        margin: 4% 1% 20% 1%;
+        text-align: center;
+        padding:0;
+        width: 100%;
+    }
+    .username {
+        background-size: 13px 14px;
+        padding-left: 35px;
+        margin: 20% 0 5% 5%;
+        width: 170px;
+    }
+    .send_password {
+        float: none;
+        font-size: 16px;
+        height: 50px;
+        width: 225px;
+        margin: 20% 0 5% 5%;
+       
+    }
+    .error_message{
+        padding: 10px 0 2px 20%;
+        width: 185px;
+
+
+    }
+}

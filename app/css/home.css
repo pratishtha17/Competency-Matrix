@@ -1,0 +1,394 @@
+/* Main page and containers styling */
+body{
+    height: 100%;
+}
+section {
+    color: #fff;
+    display: flex;
+    font-family: 'Sapient Centro Slab';
+    height: 90%;
+    margin: 0 auto;
+}
+.profile_container, .list_container {
+    flex-grow: 1;
+    margin-top: 2%;
+    text-align: center;
+}
+.profile_container {
+    height: 500px;
+    margin-left: 2%;
+    width: 15%;
+}
+.scroll_profile {
+    overflow-y: auto;
+}
+.scroll_profile::-webkit-scrollbar {
+    width: 7px;
+}
+.scroll_profile::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #ccc;
+    background-color: #d0c2c2;
+    visibility: hidden;
+}
+.scroll_profile:hover::-webkit-scrollbar-thumb,
+.scroll_profile:active::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+.list_container {
+    display: flex;
+    flex-direction: column;
+    height: 98%;
+    margin-left: 2%;
+    width: 70%;
+}
+/* List Container Styling */
+.list_heading {
+    font-size: 1.2em;
+    font-weight: normal;
+    padding-left: 2.5%;
+    text-align: left;
+}
+.data_scroll{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+}
+.data_list_scroll{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    height: 100%;
+    width: 96%;
+}
+.supervisee_list_header {
+    background-color: #2C2C2C;
+    border-radius: 3px 3px 0 0;
+    font-family: 'Sapient Centro Slab Medium';
+    height: 8%;
+    width: 100%;
+}
+.sorting_icon {
+    margin-left: 7px;
+}
+.supervisee_list {
+    width: 100%;
+}
+.supervisee_details, .supervisee_title {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.supervisee_title {
+    color: #9a9a9a;
+    height: 100%;
+    width: 98.5%;
+}
+.link_header{
+    color: #9a9a9a; 
+    cursor: pointer;
+    text-decoration: none;
+}
+.link_header:hover{
+    color: #fff;
+}
+.supervisee_details {
+    height: 12%;
+}
+.supervisee_details:hover {
+    background-color: #2C2C2C;
+}
+.supervisee_even {
+    background-color: #3d3d3d;
+}
+.supervisee_odd {
+    background-color: #424242;
+}
+.user_details {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    max-width: 30%;
+    text-align: left;
+    width: 30%;
+    word-wrap: break-word;
+}
+.emp_image, .emp_action{
+    justify-content: center;
+    text-align: center;
+}
+.click_supervisee{
+    cursor: pointer;
+}
+.supervisee_image{
+    border-radius: 5px;
+    border: 1px solid #5f5f5f;
+    cursor: pointer;
+    height: 35px;
+    width: 35px;
+}
+.scroll {
+    height: 100%;
+}
+.scroll::-webkit-scrollbar-thumb 
+{
+    background-color: #3d3d3d;
+    visibility: visible;
+}
+/* A-Z Scroll Bar Styling */
+.az_scroll{
+    height: 540px;
+    margin-left: 1%;
+    padding: 10% 0 0 0;
+    width: 1%;
+}
+.alphabet_scroll {
+    color: rgba(255, 255, 255, 0.4);
+    display: block;
+    font-size: .80em;
+    margin-bottom: 65%;
+    text-decoration: none;
+}
+.alphabet_scroll:hover {
+    color: #fff;
+    font-size: 1em;
+    transition: font-size 1s;
+}
+/* Search bar Styling */
+.search_bar {
+    border-bottom: 1px solid #808080;
+    height: 5%;
+    padding: 0 0 0 22px;
+    text-align: left;
+    width: 95.5%;
+}
+.search_field {
+    background: transparent;
+    border: none;
+    box-sizing: border-box;
+    color: #fff;
+    height: 100%;
+    outline-style: none;
+    padding-left: 7px;
+    width: 95%;
+}
+.search_icon{
+    -moz-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    -o-transform: scale(-1, 1);
+    -webkit-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+    font-size: 18px;
+}
+input::-webkit-input-placeholder {
+    color: #666;
+    font-family: 'Sapient Centro Slab';
+    font-size: 1.5em;
+}
+input:-moz-placeholder {
+    color: #666;
+    font-family: 'Sapient Centro Slab';
+    font-size: 1.5em;
+}
+input:-ms-input-placeholder {
+    color: #666;
+    font-family: 'Sapient Centro Slab';
+    font-size: 1.5em;
+}
+/* Edit Delete Icon Styling */
+.icon_edit, .icon_delete {
+    border-radius: 100%;
+    border: 1px solid #808080;
+    color: #fff;
+    cursor: pointer;
+    height: 15px;
+    margin: 7px;
+    padding: 5px;
+    width: 15px;
+}
+.icon_edit:hover, .icon_delete:hover {
+    border: 1px solid #fff;
+}
+.icon_edit .fa-pencil, .icon_delete .fa-trash {
+    font-size: 13px;
+}
+/*Modal CSS*/
+.cancels {
+    margin-left: 10px;
+}
+.input_text_modal:focus {
+    border-bottom: 1px solid #fff;
+    outline-style: none;
+}
+.div_margin {
+    margin-top: 5%;
+}
+.color_dark {
+    color: #9f9f9f;
+}
+.div_heading {
+    font-size: 16px;
+}
+.less_width {
+    width: 250px;
+}
+.option_role {
+    background-color: #2C2C2C;
+    color: #fff;
+}
+.supervisor_email_error{
+    margin:0px;
+    font-size: 0.8em;
+}
+select:focus > option:checked {
+    background: #424242;
+}
+@media screen and (min-width: 721px) and (max-width: 1210px)
+{
+    .profile_container{
+        width: 30%;
+    }
+    .list_container{
+        margin-left: 5%;
+        width: 90%;
+    }
+    .data_list_scroll{
+        width: 90%;
+    }
+    .supervisee_title{
+        height: 50px;
+    }
+    .supervisee_list {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 720px)
+{
+    header{
+        position: fixed;
+        z-index: 100;
+    }
+    section{
+        flex-direction: column;
+        height: 95%;
+        margin: 0;
+        width: 100%;
+    }
+    .profile_container, .list_container{
+        margin: 0;
+        width: 100%;
+    }
+    .profile_container{
+        height: 180px;
+        margin-top: 100px;
+        position: fixed;
+    }
+    .profile{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    .profile_img, .profile{
+        border-radius: 0;
+        height: 100%;
+    }
+    .profile_img{
+        width: 40%;
+    }
+    .profile_details{
+        max-height: 100%;
+        width: 60%;
+    }
+    .profile_detail{
+        padding-right: 8%;
+        word-wrap: break-word;
+    }
+    .profile_name{
+        margin-top: 12px;
+    }
+    .heading_container{
+        background-color: black;
+        margin-top: 280px;
+        position: fixed;
+        width: 100%;
+    }
+    .list_heading{
+        font-size: 1em;
+        text-align: center;
+    }
+    .data_scroll, .supervisee_list_header{
+        width: 100%;
+    }
+    .data_scroll{
+        height: 42%;
+        margin-top: 328px;
+        position: fixed;
+    }
+    .data_list_scroll{
+        font-size: 12px;
+        width: 100%;
+    }
+    .supervisee_list_header{
+        height: 15%;
+    }
+    .supervisee_list{
+        width: 100%;
+    }
+    .supervisee_details{
+        height: 25%;
+    }
+    .supervisee_details:hover{
+        background-color: #2C2C2C; 
+    }
+    .supervisee_image{
+        border-radius: 5px;
+        height: 35px;
+        width: 30px;
+    }
+    .user_details{
+        word-wrap: break-word;
+    }
+    .emp_id{
+        width: 20%;
+    }
+    .emp_name{
+        width: 35%;
+    }
+    .search_bar{
+        background-color: black;
+        border: none;
+        height: 40px;
+        margin-top: 60px;
+        position: fixed;
+        width: 95%;
+    }
+    .search_field{
+        height: 40px;
+        width: 90%;
+    }
+    .icon_edit, .icon_delete{
+        margin: 4px;
+    }
+    .az_scroll{
+        display: none;
+    }
+    .scroll::-webkit-scrollbar 
+    {
+        width: 0;
+    }
+    footer{
+        position: static;
+    }
+    footer .copyright p {
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+    }
+    .mobile_view{
+        display: inline;
+    }
+    .desktop_view{
+        display: none;
+    } 
+}

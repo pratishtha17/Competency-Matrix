@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/libs/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/profile_wall.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="icon" href="img/fav-icon.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="http://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/libs/polyfiller.js"></script>
+    <script type="text/javascript">
+    $.webshims.polyfill();
+    </script>
+</head>
+
+<body>
+    <header aria-label="Header Section">
+        <div class="header_container">
+            <div class="logo" aria-label="Logo container">
+                <img src="img/sn_logo.png" alt="Sapient Logo" class="sn_logo" />
+            </div>
+            <div class="name_pic ">
+                <div class="header_dropdown" id="dropdown">
+                    <img src="img/profile_default.jpg" alt="Profile picture" class="profile_pic round_corner " id="header_dropdown_profile_pic" />
+                    <div class="header_dropdown_content" id="dropdown_content">
+                        <a href="javascript:void(0)" id="supervisor_edit_profile"><img src="img/profile_default.jpg" id="header_profile_pic" alt="header_profile_image"><span>Edit Profile</span></a>
+                        <a href="javascript:void(0)" id="help_btn"><img src="img/help.png" alt="help_icon"><span>Help</span></a>
+                        <a id="logout"><img src="img/logout.png" id="logout_image" alt="logout_icon"><span>Logout</span></a>
+                    </div>
+                </div>
+                <span class="header_profile_name"></span>
+            </div>
+        </div>
+    </header>
+    <section>
+        <!-- Search Bar for Mobile -->
+        <div class="search_bar mobile_view">
+            <i class="fa fa-search search_icon" id="search_icon_mob" aria-hidden="true" aria-label="Search Icon"></i>
+            <input type="search" placeholder="Search" class="search_field" id="search_bar_mob" aria-label="Search Bar" />
+        </div>
+        <!-- Profile Wall -->
+        <div class="profile_container">
+            <div class="profile">
+                <img id="profile_img" class="profile_img" src="img/profile_default.jpg" alt="Profile picture">
+                <div id="profile_details" class="profile_details scroll_profile">
+                </div>
+            </div>
+        </div>
+        <div class="list_container">
+            <!-- Search Bar for Desktop -->
+            <div class="search_bar desktop_view">
+                <i class="fa fa-search search_icon" id="search_icon_desk" aria-hidden="true" aria-label="Search Icon"></i>
+                <input type="search" placeholder="Search" class="search_field" id="search_bar_desk" aria-label="Search Bar" />
+            </div>
+            <!-- Page Heading -->
+            <div class="heading_container" id="heading_container" aria-label="Heading">
+                <h3 class="list_heading" id="list_heading">Your Supervisees</h3>
+            </div>
+            <div class="data_scroll" id="data_scroll">
+                <div class="data_list_scroll" id="data_list_scroll">
+                    <!-- Supervisee List Header -->
+                    <div class="supervisee_list_header" id="super_list_header">
+                        <div class='supervisee_title'>
+                            <div class='user_details emp_image'>
+                            </div>
+                            <div class='user_details emp_id' id='empid'>
+                                <p class='link_header'>ID  <i class='fa fa-sort-numeric-asc' aria-hidden='true'></i></p>
+                            </div>
+                            <div class='user_details emp_name' id='employee_name'>
+                                <p class='link_header'>NAME  <i class='fa fa-sort-alpha-asc' aria-hidden='true'></i></p>
+                            </div>
+                            <div class='user_details emp_role' id='role'>
+                                <p class='link_header'>ROLE  <i class='fa fa-sort-alpha-asc' aria-hidden='true'></i></p>
+                            </div>
+                            <div class='user_details emp_action'>ACTION</div>
+                        </div>
+                    </div>
+                    <!-- Supervisee List -->
+                    <div class="supervisee_list scroll" id="super_list">
+                    </div>
+                </div>
+                <!-- A-Z Scroll -->
+                <div class="az_scroll" id="az_scroll">
+                </div>
+            </div>
+        </div>
+        <!-- MODALS -->
+        <!-- Help Modal -->
+        <div class="modal" id="help_modal">
+            <div class="inside_modal">
+                <div class="div_heading">
+                    <p class="modal_p div_heading">We are here to help you</p>
+                </div>
+                <div class="div_margin">
+                    <button id="modal_ok_help" class="red_button">OK</button>
+                </div>
+            </div>
+        </div>
+        <!-- Help Modal Ends -->
+        <!-- Delete Modal -->
+        <div class="modal" id="container_modal">
+            <div class="inside_modal less_width">
+                <div class="div_heading">
+                    <p class="modal_p" id="delete_modal_text">Confirm Delete?</p>
+                </div>
+                <div class="div_margin">
+                    <button class="red_button" id="modal_delete_btn">Yes</button>
+                    <button id="modal_delete_btn_deny" class="red_button cancels">No</button>
+                    <button id="modal_ok_delete" class="red_button">OK</button>
+                </div>
+            </div>
+        </div>
+        <!-- Delete Modal Ends -->
+        <!-- Supervisee Edit Profile Modal -->
+        <div class="modal" id="container_modal_add">
+            <div class="inside_modal" id="inside_side">
+                <form method="POST" onsubmit="false">
+                    <div class="div_heading">
+                        <label class="modal_text heading_label">Edit Supervisee Details</label>
+                    </div>
+                    <div class="div_margin">
+                        <label class="modal_text" for="id_supervisee">ID</label>
+                    </div>
+                    <div class="div_margin">
+                        <input class="input_text_modal color_dark" type="text" name="id_supervisee" value="" placeholder="" readonly="readonly" disabled="disabled" id="id_supervisee" required="required" />
+                    </div>
+                    <div class="div_margin">
+                        <label class="modal_text" for="supervisee_name">Name</label>
+                    </div>
+                    <div class="div_margin">
+                        <input class="input_text_modal" type="text" name="name" value="" placeholder="" contenteditable="true" id="supervisee_name" required="required" />
+                        <div class="error_message email_error" id="supervisee_name_error"><p id="supervisee_name_error_palceholder" class="supervisor_email_error"></p></div>
+                    </div>
+                    <div class="div_margin">
+                        <label class="modal_text" for="role_supervisee">Role</label>
+                    </div>
+                    <div class="div_margin">
+                        <select class="input_text_modal" id="role_supervisee">
+                            <option value="Junior Associate L1" class="option_role">Junior Associate L1</option>
+                            <option value="Junior Associate L2" class="option_role">Junior Associate L2</option>
+                            <option value="Senior Associate L1" class="option_role">Senior Associate L1</option>
+                            <option value="Senior Associate L2" class="option_role">Senior Associate L2</option>
+                            <option value="Project Manager" class="option_role">Project Manager</option>
+                        </select>
+                    </div>
+                    <div class="div_margin">
+                        <button type="button" name="save_supervisee" id="submit_image_supervisee" class="red_button">Save</button>
+                        <button type="button" name="cancel_supervisee" id="cancel_image_supervisee" class="red_button cancels">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Supervisee Edit Profile Modal Ends -->
+        <!-- Supervisor Edit Profile Modal -->
+        <div class="modal" id="container_modal_supervisor">
+            <div class="inside_modal">
+                <form method="POST">
+                    <div class="div_heading">
+                        <label class="modal_text heading_label">Edit Your Details</label>
+                    </div>
+                    <div class="div_margin">
+                        <label class="modal_text" for="id_supervisor">ID</label>
+                    </div>
+                    <div class="div_margin">
+                        <input class="input_text_modal color_dark" type="text" name="id_supervisor" value="" placeholder="" readonly="readonly" disabled="disabled" id="id_supervisor" required="required" />
+                    </div>
+                    <div class="div_margin">
+                        <label class="modal_text" for="role_supervisor">Role</label>
+                    </div>
+                    <div class="div_margin">
+                        <input class="input_text_modal color_dark" type="text" name="Role" value="" placeholder="" id="role_supervisor" required="required" readonly="readonly" disabled="disabled" />
+                    </div>
+                    <div class="div_margin">
+                        <label class="modal_text" for="name_supervisor">Name</label>
+                    </div>
+                    <div class="div_margin">
+                        <input class="input_text_modal" type="text" name="name" value="" placeholder="" contenteditable="true" id="name_supervisor" required="required" />
+                        <div class="error_message email_error" id="name_error"><p id="name_error_placeholder" class="supervisor_email_error"></p></div>
+                    </div>
+                    <div class="div_margin">
+                        <label class="modal_text" for="email_address_supervisor">Email</label>
+                    </div>
+                    <div class="div_margin">
+                        <input class="input_text_modal" type="text" name="email_address" value="" placeholder="" id="email_address_supervisor" required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" />
+                        <div class="error_message email_error" id="email_error"><p id="email_error_palceholder" class="supervisor_email_error"></p></div>
+                    </div>
+
+                    <div class="div_margin">
+                        <label class="modal_text" for="address_supervisor">Address</label>
+                    </div>
+                    <div class="div_margin">
+                        <input class="input_text_modal" type="text" name="Address" value="" placeholder="" id="address_supervisor" required="required" />
+                        <div class="error_message email_error" id="address_error"><p id="address_error_placeholder" class="supervisor_email_error"></p></div>
+                    </div>
+                    <div class="div_margin">
+                        <button type="button" name="save supervisor" value="Save" id="submit_profile_image" class="red_button">Save</button>
+                        <button type="button" name="cancel_supervisor" id="cancel_image_supervisor" class="red_button cancels">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- Supervisor Edit Profile Modal Ends -->
+    </section>
+    <footer>
+        <div class="copyright">
+            <p>COPYRIGHT &copy; 2006-2017 <span id="sapient_footer">SAPIENT</span></p>
+        </div>
+    </footer>
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+</body>
+
+</html>
